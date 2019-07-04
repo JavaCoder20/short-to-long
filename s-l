@@ -1,7 +1,5 @@
 #!/bin/bash
-
 # script to expand short url
-
 if [ -n "$1" ]; then 
 	if [[ $1 =~ https://* ]]; then
 	echo "
@@ -15,7 +13,6 @@ $LONG "
 		echo "not a url" >&2
 	fi
 fi
-#
 if [ -z "$1" ]; then
 	echo "Enter url"
 fi
