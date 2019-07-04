@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# script to expand short url
+
+read -p "Enter short url > "
+
+if [ -n "$REPLY" ]; then 
+	if [[ $REPLY =~ https://* ]]; then
+	echo "
+Short url :
+$REPLY	"
+LONG=$(curl -sI "$REPLY" | grep ^location | cut --delimiter=" " -f 2)
+	echo "
+Long url :
+$LONG "
+	else
+		echo "not a url" >&2
+	fi
+fi
+#
+if [ -z "$REPLY" ]; then
+	echo "Enter url"
+fi
