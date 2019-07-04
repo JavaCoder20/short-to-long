@@ -1,5 +1,5 @@
 # short-to-long
 shell script to expand short url
 
-# usage
+## usage
 just type shortened url after s-l
